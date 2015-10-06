@@ -746,6 +746,218 @@ This text will go right-to-left
                     </table>
                 </td>
             </tr>
+            <tr>
+                <td>28</td>
+                <td>&lt;datalist&gt;</td>
+                <td>The &lt;datalist> tag specifies a list of pre-defined options for an &lt;input> element. The &lt;datalist> tag is used to provide an "autocomplete" feature on &lt;input> elements. Users will see a drop-down list of pre-defined options as they input data. Use the &lt;input> element's list attribute to bind it together with a &lt;datalist> element.</td>
+                <td>Eg.
+                    <br>
+                    <input list="browsers">
+                    <datalist id="browsers">
+                        <option value="Internet Explorer">
+                            <option value="Firefox">
+                                <option value="Chrome">
+                                    <option value="Opera">
+                                        <option value="Safari">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>&lt;dd&gt;</td>
+                <td>The &lt;dd> tag is used to describe a term/name in a description list. The &lt;d> tag is used in conjunction with &lt;dl> (defines a description list) and &lt;dt> (defines terms/names). Inside a &lt;dd> tag you can put paragraphs, line breaks, images, links, lists, etc.</td>
+                <td>
+                    Eg.
+                    <dl>
+                        <dt>Coffee</dt>
+                        <dd>Black hot drink</dd>
+                        <dt>Milk</dt>
+                        <dd>White cold drink</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>&lt;del&gt;</td>
+                <td>The &lt;del> tag defines text that has been deleted from a document.</td>
+                <td>Eg.
+                    <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+                    <br> Tip: Also look at the &lt;ins> tag to markup inserted text. Tip: Use &lt;del> and &lt;ins> to markup updates and modifications in a document. Browsers will normally strike a line through deleted text and underline inserted text.
+                    <br>
+                    <table class="w3-table-all notranslate">
+                        <tbody>
+                            <tr>
+                                <th style="width:15%">Attribute</th>
+                                <th style="width:32%">Value</th>
+                                <th style="width:53%">Description</th>
+                            </tr>
+                            <tr>
+                                <td><a href="att_del_cite.asp">cite</a></td>
+                                <td><i>URL</i></td>
+                                <td>Specifies a URL to a document that explains the reason why the text was deleted</td>
+                            </tr>
+                            <tr>
+                                <td><a href="att_del_datetime.asp">datetime</a></td>
+                                <td><i>YYYY-MM-DDThh:mm:ssTZD</i></td>
+                                <td>Specifies the date and time of when the text was deleted</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>&lt;details&gt;</td>
+                <td>The &lt;details> tag specifies additional details that the user can view or hide on demand. The &lt;details> tag can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the &lt;details> tag. The content of a &lt;details> element should not be visible unless the open attribute is set.</td>
+                <td>Eg.
+                    <br>
+                    <details>
+                        <summary>Copyright 1999-2014.</summary>
+                        <p> - by Refsnes Data. All Rights Reserved.</p>
+                        <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+                    </details>
+                    <br>
+                    <table class="w3-table-all notranslate">
+                        <tbody>
+                            <tr>
+                                <th style="width:20%">Attribute</th>
+                                <th>Value</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td class="html5badge"><a href="att_details_open.asp">open</a></td>
+                                <td>open</td>
+                                <td>Specifies that the details should be visible (open) to the user</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>&lt;dfn&gt;</td>
+                <td>The &lt;dfn> tag represents the defining instance of a term in HTML. The defining instance is often the first use of a term in a document. The nearest parent of the &lt;dfn> tag must also contain the definition/explanation for the term inside &lt;dfn>. The term inside the &lt;dfn> tag can be any of the following:</td>
+                <td>
+                    Eg.
+                    <br>
+                    <p><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>33</td>
+                <td>&lt;dialog&gt;</td>
+                <td>The &lt;dialog> tag defines a dialog box or window. The &lt;dialog> element makes it easy to create popup dialogs and modals on a web page.
+                </td>
+                <td>Eg.
+                    <p><b>Note:</b> The dialog tag is currently only supported in Chrome version 37+, Safari 6+ and Opera 24+.</p>
+
+                    <table>
+                        <tr>
+                            <th>January
+                                <dialog open>This is an open dialog window</dialog>
+                            </th>
+                            <th>February</th>
+                            <th>March</th>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>28</td>
+                            <td>31</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>&lt;div&gt;</td>
+                <td>The &lt;dir> tag is not supported in HTML5. Use CSS instead. The &lt;dir> tag is used to list directory titles.</td>
+                <td>
+                    Eg.
+                    <dir>
+                        <li>html</li>
+                        <li>xhtml</li>
+                        <li>css</li>
+                    </dir>
+                    <br>
+                    <table class="w3-table-all notranslate">
+                        <tbody>
+                            <tr>
+                                <th style="width:20%">Attribute</th>
+                                <th style="width:20%">Value</th>
+                                <th style="width:60%">Description</th>
+                            </tr>
+                            <tr>
+                                <td><a href="att_dir_compact.asp">compact</a></td>
+                                <td>compact</td>
+                                <td><span class="deprecated">Not supported in HTML5.</span>
+                                    <br> Specifies that the list should render smaller than normal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td>&lt;div&gt;</td>
+                <td>The &lt;div> tag defines a division or a section in an HTML document. The &lt;div> tag is used to group block-elements to format them with CSS.</td>
+                <td>
+                    <table class="w3-table-all notranslate">
+                        <tbody>
+                            <tr>
+                                <th style="width:20%">Attribute</th>
+                                <th style="width:20%">Value</th>
+                                <th style="width:60%">Description</th>
+                            </tr>
+                            <tr>
+                                <td><a href="att_div_align.asp">align</a></td>
+                                <td>left
+                                    <br> right
+                                    <br> center
+                                    <br> justify
+                                </td>
+                                <td><span class="deprecated">Not supported in HTML5.</span>
+                                    <br> Specifies the alignment of the content inside a &lt;div&gt; element</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td>&lt;dl&gt;</td>
+                <td>The &lt;dl> tag defines a description list. The &lt;dl> tag is used in conjunction with &lt;dt> (defines terms/names) and &lt;dd> (describes each term/name).
+
+                </td>
+                <td>Eg.
+                    <br> A description list, with terms and descriptions:
+
+                    <dl>
+                        <dt>Coffee</dt>
+                        <dd>Black hot drink</dd>
+                        <dt>Milk</dt>
+                        <dd>White cold drink</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td>&lt;dt&gt;</td>
+                <td>The &lt;dt> tag defines a term/name in a description list. The &lt;dt> tag is used in conjunction with &lt;dl> (defines a description list) and &lt;dd> (describes each term/name).
+
+                </td>
+                <td>
+                    Eg.
+                    <br> A description list, with terms and descriptions:
+
+                    <dl>
+                        <dt>Coffee</dt>
+                        <dd>Black hot drink</dd>
+                        <dt>Milk</dt>
+                        <dd>White cold drink</dd>
+                    </dl>
+
+                </td>
+            </tr>
         </tbody>
     </table>
 </body>
