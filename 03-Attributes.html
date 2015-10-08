@@ -6,6 +6,10 @@
     <title>HTML Attributes</title>
     <base href="http://www.w3schools.com/tags/" target="_blank" />
     <style>
+        .deprecated {
+            color: red;
+        }
+
         table {
             width: 100%;
             border: 1px solid #000;
@@ -1180,6 +1184,102 @@
                         </tr>
                     </tbody>
                 </table>
+            </td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>&lt;frame&gt;</td>
+            <td>
+                The &lt;frame> tag is not supported in HTML5. The &lt;frame> tag defines one particular window (frame) within a &lt;frameset>. Each &lt;frame> in a &lt;frameset> can have different attributes, such as border, scrolling, the ability to resize, etc. Note: If you want to validate a page containing frames, be sure the
+                <!DOCTYPE> is set to either "HTML Frameset DTD" or "XHTML Frameset DTD"
+            </td>
+            <td>
+                Eg.
+                <br>
+                <frameset cols="60%,40%">
+                    <frame src="http://www.w3schools.com/" longdesc="w3s.txt">
+                        <frame src="http://www.w3schools.com/">
+                </frameset>
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_frame_frameborder.asp">frameborder</a></td>
+                            <td>0
+                                <br> 1
+                            </td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies whether or not to display a border around a frame</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_frame_longdesc.asp">longdesc</a></td>
+                            <td><i>URL</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies a page that contains a long description of the content of a frame</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_frame_marginheight.asp">marginheight</a></td>
+                            <td><i>pixels</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies the top and bottom margins of a frame</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_frame_marginwidth.asp">marginwidth</a></td>
+                            <td><i>pixels</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies the left and right margins of a frame</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_frame_name.asp">name</a></td>
+                            <td><i>text</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies the name of a frame</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_frame_noresize.asp">noresize</a></td>
+                            <td>noresize</td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies that a frame is not resizable</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_frame_scrolling.asp">scrolling</a></td>
+                            <td>yes
+                                <br> no
+                                <br> auto
+                            </td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies whether or not to display scrollbars in a frame</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_frame_src.asp">src</a></td>
+                            <td><i>URL</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies the URL of the document to show in a frame</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>&lt;frameset&gt;</td>
+            <td>
+                The &lt;frameset> tag is not supported in HTML5. The &lt;frameset> tag defines a frameset. The &lt;frameset> element holds one or more &lt;frame> elements. Each &lt;frame> element can hold a separate document. The &lt;frameset> element specifies HOW MANY columns or rows there will be in the frameset, and HOW MUCH percentage/pixels of space will occupy each of them. Note: If you want to validate a page containing frames, be sure the
+                <!DOCTYPE> is set to either "HTML Frameset DTD" or "XHTML Frameset DTD".
+            </td>
+            <td>
+                Eg.
+                <br>
+                <frameset cols="25%,*,25%">
+                    <frame src="frame_a.htm">
+                        <frame src="frame_b.htm">
+                            <frame src="frame_c.htm">
+                </frameset>
             </td>
         </tr>
     </table>
