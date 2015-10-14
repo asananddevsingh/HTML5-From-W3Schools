@@ -1932,6 +1932,234 @@
                 </table>
             </td>
         </tr>
+        <tr>
+            <td>57</td>
+            <td>&lt;kbd&gt;</td>
+            <td>
+                The &lt;kbd> tag is a phrase tag. It defines keyboard input. Tip: This tag is not deprecated, but it is possible to achieve richer effect with CSS.
+            </td>
+            <td>
+                Eg.
+                <kbd>Keyboard input</kbd>
+            </td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td>&lt;keygen&gt;</td>
+            <td>
+                The &lt;keygen> element is new in HTML5.
+                <br> The &lt;keygen> tag specifies a key-pair generator field used for forms. When the form is submitted, the private key is stored locally, and the public key is sent to the server.
+                <br>
+
+            </td>
+            <td>
+                Eg.
+                <br>
+                <form action="demo_keygen.asp" method="get">
+                    Username:
+                    <input type="text" name="usr_name"> Encryption:
+                    <keygen name="security">
+                        <input type="submit">
+                </form>
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th>Value</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_keygen_autofocus.asp">autofocus</a></td>
+                            <td>autofocus</td>
+                            <td>Specifies that a &lt;keygen&gt; element should automatically get focus when the page loads</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge">challenge</td>
+                            <td>challenge</td>
+                            <td>Specifies that the value of the &lt;keygen&gt; element should be challenged when submitted</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_keygen_disabled.asp">disabled</a></td>
+                            <td>disabled</td>
+                            <td>Specifies that a &lt;keygen&gt; element should be disabled</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_keygen_form.asp">form</a></td>
+                            <td><i>form_id</i></td>
+                            <td>Specifies one or more forms the &lt;keygen&gt; element belongs to</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_keygen_keytype.asp">keytype</a></td>
+                            <td>rsa
+                                <br> dsa
+                                <br> ec
+                            </td>
+                            <td>Specifies the security algorithm of the key</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_keygen_name.asp">name</a></td>
+                            <td><i>name</i></td>
+                            <td>Defines a name for the &lt;keygen&gt; element</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td>&lt;label&gt;</td>
+            <td>
+                The &lt;label> tag defines a label for an &lt;input> element.
+                <br> The &lt;label> element does not render as anything special for the user. However, it provides a usability improvement for mouse users, because if the user clicks on the text within the &lt;label> element, it toggles the control.
+                <br> The for attribute of the &lt;label> tag should be equal to the id attribute of the related element to bind them together.
+
+            </td>
+            <td>
+                Eg.
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_label_for.asp">for</a></td>
+                            <td><i>element_id</i></td>
+                            <td>Specifies which form element a label is bound to</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_label_form.asp">form</a></td>
+                            <td><i>form_id</i></td>
+                            <td>Specifies one or more forms the label belongs to</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td>&lt;legend&gt;</td>
+            <td>
+                The &lt;legend> tag defines a caption for the &lt;fieldset> element.
+            </td>
+            <td>
+                Eg.
+                <br> &lt;fieldset&gt;
+                <br> &lt;legend&gt;Personalia:&lt;/legend&gt;
+                <br> Name: &lt;input type="text"&gt;
+                <br> Email: &lt;input type="text"&gt;
+                <br>Date of birth: &lt;input type="text"&gt;
+                <br>&lt;/fieldset&gt;
+                <br>
+                <fieldset>
+                    <legend align="right">Personalia:</legend>
+                    Name:
+                    <input type="text" size="30">
+                    <br> Email:
+                    <input type="text" size="30">
+                    <br> Date of birth:
+                    <input type="text" size="10">
+                </fieldset>
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_legend_align.asp">align</a></td>
+                            <td>top
+                                <br> bottom
+                                <br> left
+                                <br> right
+                            </td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br> Specifies the alignment of the caption</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td>
+                &lt;li&gt;
+            </td>
+            <td>
+                The &lt;li> tag defines a list item. The &lt;li> tag is used in ordered lists(&lt;ol>), unordered lists (&lt;ul>), and in menu lists (&lt;menu>).
+                <br> <b>Tpis:</b>
+                <br> The type attribute of &lt;li> is not supported in HTML5. Use CSS instead.
+                <br> CSS syntax: &lt;li style="list-style-type:square">
+                <br> CSS Example: list style type
+                <br> In our CSS tutorial you can find more details about the list-style-type property.
+            </td>
+            <td>
+                Eg.
+                <ol>
+                    <li type="a">Coffee</li>
+                    <li type="1">Tea</li>
+                    <li type="i">Milk</li>
+                </ol>
+                <ul>
+                    <li>Coffee</li>
+                    <li type="square">Tea</li>
+                    <li>Milk</li>
+                </ul>
+
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_li_type.asp">type</a></td>
+                            <td>1
+                                <br> A
+                                <br> a
+                                <br> I
+                                <br> i
+                                <br> disc
+                                <br> square
+                                <br> circle
+                            </td>
+                            <td><span class="deprecated">Not supported in HTML5.<br> </span>Specifies which kind of bullet point will be used</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_li_value.asp">value</a></td>
+                            <td><i>number</i></td>
+                            <td>Specifies the value of a list item. The following list items will increment from that number (only for &lt;ol&gt; lists)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td>&lt;link&gt;</td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
     </table>
 </body>
 
