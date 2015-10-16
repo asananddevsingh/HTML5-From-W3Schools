@@ -2305,6 +2305,265 @@
 
             </td>
         </tr>
+        <tr>
+            <td>65</td>
+            <td>&lt;mark&gt;</td>
+            <td>
+                The &lt;mark> tag defines marked text. Use the &lt;mark> tag if you want to highlight parts of your text.
+            </td>
+            <td>
+                Eg.
+                <p>Do not forget to buy
+                    <mark>milk</mark> today.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td>66</td>
+            <td>
+                &lt;menu&gt;
+            </td>
+            <td>
+                The &lt;menu> tag defines a list/menu of commands. The &lt;menu> tag is used for context menus, toolbars and for listing form controls and commands.
+
+
+            </td>
+            <td>Eg.
+                <br>
+                <div style="background:yellow;border:1px solid #cccccc;padding: 10px;" contextmenu="mymenu">
+                    <p>Right-click inside this box to see the context menu!
+
+                        <menu type="context" id="mymenu">
+                            <menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png"></menuitem>
+                            <menu label="Share on...">
+                                <menuitem label="Twitter" icon="ico_twitter.png" onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"></menuitem>
+                                <menuitem label="Facebook" icon="ico_facebook.png" onclick="window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href);"></menuitem>
+                            </menu>
+                            <menuitem label="Email This Page" onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+                        </menu>
+
+                </div>
+
+                <p>This example currently only works in Firefox!</p>
+
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_menu_label.asp">label</a></td>
+                            <td><i>text</i></td>
+                            <td>Specifies a visible label for the menu</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_menu_type.asp">type</a></td>
+                            <td>popup
+                                <br> toolbar
+                                <br>context</td>
+                            <td>Specifies which type of menu to display</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>67</td>
+            <td>
+                &lt;menuitem&gt;
+            </td>
+            <td>
+                The &lt;menuitem> tag is new in HTML5.
+            </td>
+            <td>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_menuitem_checked.asp">checked</a></td>
+                            <td>checked</td>
+                            <td>Specifies that the command/menu item should be checked when the page loads. Only for type="radio" or type="checkbox"</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge">command</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_menuitem_default.asp">default</a></td>
+                            <td>default</td>
+                            <td>Marks the command/menu item as being a default command</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_menuitem_disabled.asp">disabled</a></td>
+                            <td>disabled</td>
+                            <td>Specifies that the command/menu item should be disabled</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_menuitem_icon.asp">icon</a></td>
+                            <td><i>URL</i></td>
+                            <td>Specifies an icon for the command/menu item</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_menuitem_label.asp">label</a></td>
+                            <td><i>text</i></td>
+                            <td>Required. Specifies the name of the command/menu item, as shown to the user</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_menuitem_radiogroup.asp">radiogroup</a></td>
+                            <td><i>groupname</i></td>
+                            <td>Specifies the name of the group of commands that will be toggled when the command/menu item itself is toggled. Only for type="radio"</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_menuitem_type.asp">type</a></td>
+                            <td>checkbox
+                                <br> command
+                                <br> radio
+                            </td>
+                            <td>Specifies the type of command/menu item. Default is "command"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>68</td>
+            <td>
+                &lt;meta&gt;
+            </td>
+            <td>
+                Metadata is data (information) about data. The &lt;meta> tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata. The metadata can be used by browsers (how to display content or reload page), search engines (keywords), or other web services.
+                <br>
+                <b>Note</b>: &lt;meta> tags always goes inside the &lt;head> element.
+                <br>
+
+                <b>Note</b>: Metadata is always passed as name/value pairs.
+                <br>
+
+                <b>Note</b>: The content attribute MUST be defined if the name or the http-equiv attribute is defined. If none of these are defined, the content attribute CANNOT be defined.
+            </td>
+            <td>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:17%">Attribute</th>
+                            <th style="width:23%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_meta_charset.asp">charset</a></td>
+                            <td><i>character_set</i></td>
+                            <td>Specifies the character encoding for the HTML document </td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_meta_content.asp">content</a></td>
+                            <td><i>text</i></td>
+                            <td>Gives the value associated with the http-equiv or name attribute</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_meta_http_equiv.asp">http-equiv</a></td>
+                            <td>content-type
+                                <br> default-style
+                                <br> refresh
+                            </td>
+                            <td>Provides an HTTP header for the information/value of the content attribute</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_meta_name.asp">name</a></td>
+                            <td>application-name
+                                <br> author
+                                <br> description
+                                <br> generator
+                                <i><br>
+      </i>keywords</td>
+                            <td>Specifies a name for the metadata</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_meta_scheme.asp">scheme</a></td>
+                            <td><i>format/URI</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies a scheme to be used to interpret the value of the content attribute</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>69</td>
+            <td>
+                &lt;meter&gt;
+            </td>
+            <td>
+                The &lt;meter> tag defines a scalar measurement within a known range, or a fractional value. This is also known as a gauge. Examples: Disk usage, the relevance of a query result, etc.
+
+                <b>Note</b>: The &lt;meter> tag should not be used to indicate progress (as in a progress bar). For progress bars, use the &lt;progress> tag.
+            </td>
+            <td>
+                Eg.
+                <p>Display a gauge:</p>
+                <p>Anna's score:
+                    <meter min="0" low="40" high="90" max="100" value="95"></meter>
+                </p>
+                <p>Peter's score:
+                    <meter min="0" low="40" high="90" max="100" value="65"></meter>
+                </p>
+                <p>Linda's score:
+                    <meter min="0" low="40" high="90" max="100" value="35"></meter>
+                </p>
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:17%">Attribute</th>
+                            <th style="width:25%">Value</th>
+                            <th style="width:58%">Description</th>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_meter_form.asp">form</a></td>
+                            <td><i>form_id</i></td>
+                            <td>Specifies one or more forms the &lt;meter&gt; element belongs to</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_meter_high.asp">high</a></td>
+                            <td><i>number</i></td>
+                            <td>Specifies the range that is considered to be a high value</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_meter_low.asp">low</a></td>
+                            <td><i>number</i></td>
+                            <td>Specifies the range that is considered to be a low value</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_meter_max.asp">max</a></td>
+                            <td><i>number</i></td>
+                            <td>Specifies the maximum value of the range</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_meter_min.asp">min</a></td>
+                            <td><i>number</i></td>
+                            <td>Specifies the minimum value of the range</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_meter_optimum.asp">optimum</a></td>
+                            <td><i>number</i></td>
+                            <td>Specifies what value is the optimal value for the gauge</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_meter_value.asp">value</a></td>
+                            <td><i>number</i></td>
+                            <td>Required. Specifies the current value of the gauge</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
     </table>
 </body>
 
