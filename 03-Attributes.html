@@ -2244,16 +2244,66 @@
         <tr>
             <td>63</td>
             <td>
-                Entry: &forall; UTF-8 &#8360; UTF-16 &#x20A8;
+                &lt;main&gt;
             </td>
-            <td></td>
-            <td></td>
+            <td>
+                The &lt;main> tag specifies the main content of a document.
+                <br> The content inside the &lt;main> element should be unique to the document.
+                <br> It should not contain any content that is repeated across documents
+                <br>such as sidebars, navigation links, copyright information, site logos, and search forms.
+                <br> Note: There must not be more than one &lt;main> element in a document.
+                <br> The &lt;main> element must NOT be a descendant of an &lt;article>,
+                <br> &lt;aside>, &lt;footer>, &lt;header>, or &lt;nav> element.
+
+            </td>
+            <td>
+                Eg.
+                <main>
+                    <h1>Web Browsers</h1>
+                    <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
+
+                    <article>
+                        <h1>Google Chrome</h1>
+                        <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
+                    </article>
+
+                    <article>
+                        <h1>Internet Explorer</h1>
+                        <p>Internet Explorer is a free web browser from Microsoft, released in 1995.</p>
+                    </article>
+
+                    <article>
+                        <h1>Mozilla Firefox</h1>
+                        <p>Firefox is a free, open-source web browser from Mozilla, released in 2004.</p>
+                    </article>
+                </main>
+            </td>
         </tr>
         <tr>
             <td>64</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                &lt;map&gt;
+            </td>
+            <td>
+                The &lt;map> tag is used to define a client-side image-map. An image-map is an image with clickable areas. The required name attribute of the &lt;map> element is associated with the &lt;img>'s usemap attribute and creates a relationship between the image and the map. The &lt;map> element contains a number of &lt;area> elements, that defines the clickable areas in the image map.
+            </td>
+            <td>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_map_name.asp">name</a></td>
+                            <td><i>mapname</i></td>
+                            <td>Required. Specifies the name of an image-map</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </td>
         </tr>
     </table>
 </body>
