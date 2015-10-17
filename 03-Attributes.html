@@ -2874,6 +2874,15 @@
                 <b>Tip</b>: If you have a long list of options, you can group related options with the &lt;optgroup> tag.
             </td>
             <td>
+                Eg.
+                <select>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel" disabled>Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <br>
+                <br>
                 <table class="w3-table-all notranslate">
                     <tbody>
                         <tr>
@@ -2907,18 +2916,187 @@
         </tr>
         <tr>
             <td>77</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                &lt;output&gt;
+
+            </td>
+            <td>
+                The &lt;output> tag represents the result of a calculation (like one performed by a script).
+            </td>
+            <td>
+                Eg.
+                <form id="frmOutput" oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+                    <input type="range" id="a" value="50">100 +
+                    <input type="number" id="b" value="50"> =
+                    <output name="x" for="a b"></output>
+                </form>
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:15%">Attribute</th>
+                            <th style="width:15%">Value</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_output_for.asp">for</a></td>
+                            <td><i>element_id</i></td>
+                            <td>Specifies the relationship between the result of the calculation, and the elements used in the calculation</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_output_form.asp">form</a></td>
+                            <td><i>form_id</i></td>
+                            <td>Specifies one or more forms the output element belongs to</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_output_name.asp">name</a></td>
+                            <td><i>name</i></td>
+                            <td>Specifies a name for the output element</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
         </tr>
         <tr>
             <td>78</td>
+            <td>
+                &lt;p&gt;
+            </td>
+            <td>
+                The &lt;p> tag defines a paragraph. Browsers automatically add some space (margin) before and after each &lt;p> element. The margins can be modified with CSS (with the margin properties).
+            </td>
+            <td>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_p_align.asp">align</a></td>
+                            <td>left
+                                <br> right
+                                <br> center
+                                <br> justify
+                            </td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br> Specifies the alignment of the text within a paragraph</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>79</td>
+            <td>
+                &lt;param&gt;
+            </td>
+
+            <td>The &lt;param> tag is used to define parameters for plugins embedded with an &lt;object> element.
+
+                <b>Tip</b>: HTML 5 also includes two new elements for playing audio or video: The &lt;audio> and &lt;video> tags.</td>
+            <td>
+                Eg. In this example the autoplay param is available. (&lt;object data="horse.wav">&lt;param name="autoplay" value="true">&lt;/object>). Since autoplay is boolean attribute so when it is present it will be used otherwise it will be as default.
+                <!-- <object data="horse.wav">
+                      <param name="autoplay" value="true">
+                </object> -->
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_param_name.asp">name</a></td>
+                            <td><i>name</i></td>
+                            <td>Specifies the name of a parameter</td>
+                        </tr>
+                        <tr>
+                            <td>type</td>
+                            <td><i>media_type</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies the media type of the parameter</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_param_value.asp">value</a></td>
+                            <td><i>value</i></td>
+                            <td>Specifies the value of the parameter</td>
+                        </tr>
+                        <tr>
+                            <td>valuetype</td>
+                            <td>data
+                                <br> ref
+                                <br> object
+                            </td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Specifies the type of the value</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td>80</td>
+            <td>
+
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>81</td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>79</td>
+            <td>82</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>83</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>84</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>85</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>86</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>87</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>88</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>89</td>
             <td></td>
             <td></td>
             <td></td>
