@@ -36,6 +36,11 @@
             width: 45%;
         }
     </style>
+    <script>
+        function displayMsg() {
+            alert("Hello World!");
+        }
+    </script>
 </head>
 
 <body>
@@ -2563,6 +2568,360 @@
                     </tbody>
                 </table>
             </td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td>&lt;nav&gt;</td>
+            <td>
+                The &lt;nav> tag defines a set of navigation links. Notice that NOT all links of a document should be inside a &lt;nav> element. The &lt;nav> element is intended only for major block of navigation links. Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
+            </td>
+            <td>
+                Eg.
+                <nav>
+                    <a href="/html/">HTML</a> |
+                    <a href="/css/">CSS</a> |
+                    <a href="/js/">JavaScript</a> |
+                    <a href="/jquery/">jQuery</a>
+                </nav>
+            </td>
+        </tr>
+        <tr>
+            <td>71</td>
+            <td>
+                &lt;noframes&gt;
+            </td>
+            <td>
+                The &lt;noframes> tag is not supported in HTML5. The &lt;noframes> tag is a fallback tag for browsers that do not support frames. It can contain all the HTML elements that you can find inside the &lt;body> element of a normal HTML page. The &lt;noframes> element can be used to link to a non-frameset version of the web site or to display a message to users that frames are required. The &lt;noframes> element goes inside the &lt;frameset> element.
+                <br> <b>Note</b>: If you want to validate a page containing frames, be sure the
+                <!DOCTYPE> is set to either "HTML Frameset DTD" or "XHTML Frameset DTD".
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>72</td>
+            <td>
+                &lt;noscript&gt;
+            </td>
+            <td>
+                The &lt;noscript> tag defines an alternate content for users that have disabled scripts in their browser or have a browser that doesn't support script. The &lt;noscript> element can be used in both &lt;head> and &lt;body>. When used inside the &lt;head> element: &lt;noscript> must contain &lt;link>, &lt;style>, and &lt;meta> elements. The content inside the &lt;noscript> element will be displayed if scripts are not supported, or are disabled in the user's browser.
+                <br>
+                <p><b>Tip:</b> It is also a good practice to use the <a href="tag_comment.asp">comment</a> tag to "hide" scripts from browsers without support for client-side scripts (so they don't show them as plain text):</p>
+            </td>
+            <td>
+                Eg. (Disable the browsers javascript to see the text inside the noscript tag.)
+                <script type="text/javascript">
+                    <!--
+
+                    function displayMsg() {
+                        alert("Hello World!")
+                    }
+                    //-->
+                </script>
+                <br>
+                <noscript>
+                    <div id="no_js_box">
+                        <h2>JavaScript is disabled on your browser.</h2>
+                        <p>Please enable JavaScript on your browser or upgrade to a JavaScript-capable browser to register for Facebook.</p>
+                    </div>
+                </noscript>
+            </td>
+        </tr>
+        <tr>
+            <td>73</td>
+            <td>
+                &lt;object&gt;
+            </td>
+            <td>
+                The &lt;object> tag defines an embedded object within an HTML document. Use this element to embed multimedia (like audio, video, Java applets, ActiveX, PDF, and Flash) in your web pages. You can also use the &lt;object> tag to embed another webpage into your HTML document. You can use the &lt;param> tag to pass parameters to plugins that have been embedded with the &lt;object> tag.
+                <br>
+                <b>Note</b>: An &lt;object> element must appear inside the &lt;body> element. The text between the &lt;object> and &lt;/object> is an alternate text, for browsers that do not support this tag.
+
+                <b>Tip</b>: For images use the &lt;img> tag instead of the &lt;object> tag.
+
+                <b>Tip</b>: At least one of the "data" or "type" attribute MUST be defined.
+
+            </td>
+            <td>
+                Eg.
+                <object width="200" height="200" align="right" data="helloworld.swf" border="5"></object>
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_align.asp">align</a></td>
+                            <td>top
+                                <br> bottom
+                                <br> middle
+                                <br> left
+                                <br> right
+                            </td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br> Specifies the alignment of the &lt;object&gt; element according to surrounding elements</td>
+                        </tr>
+                        <tr>
+                            <td>archive</td>
+                            <td><i>URL</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>A space separated list of URL's to archives. The archives contains resources relevant to the object</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_border.asp">border</a></td>
+                            <td><i>pixels</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br> Specifies the width of the border around an &lt;object&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>classid</td>
+                            <td><i>class_ID</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Defines a class ID value as set in the Windows Registry or a URL</td>
+                        </tr>
+                        <tr>
+                            <td>codebase</td>
+                            <td><i>URL</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Defines where to find the code for the object</td>
+                        </tr>
+                        <tr>
+                            <td>codetype</td>
+                            <td><i>media_type</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>The media type of the code referred to by the classid attribute</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_data.asp">data</a></td>
+                            <td><i>URL</i></td>
+                            <td>Specifies the URL of the resource to be used by the object</td>
+                        </tr>
+                        <tr>
+                            <td>declare</td>
+                            <td>declare</td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Defines that the object should only be declared, not created or instantiated until needed</td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_object_form.asp">form</a></td>
+                            <td><i>form_id</i></td>
+                            <td>Specifies one or more forms the object belongs to</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_height.asp">height</a></td>
+                            <td><i>pixels</i></td>
+                            <td>Specifies the height of the object</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_hspace.asp">hspace</a></td>
+                            <td><i>pixels</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br> Specifies the whitespace on left and right side of an object</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_name.asp">name</a></td>
+                            <td><i>name</i></td>
+                            <td>Specifies a name for the object</td>
+                        </tr>
+                        <tr>
+                            <td>standby</td>
+                            <td><i>text</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br>Defines a text to display while the object is loading</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_type.asp">type</a></td>
+                            <td><i>media_type</i></td>
+                            <td>Specifies the media type of data specified in the data attribute</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_usemap.asp">usemap</a></td>
+                            <td><em>#mapname</em></td>
+                            <td>Specifies the name of a client-side image map to be used with the object</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_vspace.asp">vspace</a></td>
+                            <td><i>pixels</i></td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br> Specifies the whitespace on top and bottom of an object</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_object_width.asp">width</a></td>
+                            <td><i>pixels</i></td>
+                            <td>Specifies the width of the object</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>74</td>
+            <td>
+                &lt;ol&gt;
+            </td>
+            <td>
+                The &lt;ol> tag defines an ordered list. An ordered list can be numerical or alphabetical. Use the &lt;li> tag to define list items.
+
+            </td>
+            <td>
+                Eg.
+                <ol reversed>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ol>
+
+                <ol start="50">
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ol>
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_ol_compact.asp">compact</a></td>
+                            <td>compact</td>
+                            <td><span class="deprecated">Not supported in HTML5.</span>
+                                <br> Specifies that the list should render smaller than normal
+                                <b>Note</b>: The compact attribute is not supported by any of the major browsers. The compact attribute is not supported HTML5. Use CSS instead.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="html5badge"><a href="att_ol_reversed.asp">reversed</a></td>
+                            <td>reversed</td>
+                            <td>Specifies that the list order should be descending (9,8,7...)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_ol_start.asp">start</a></td>
+                            <td><i>number</i></td>
+                            <td>Specifies the start value of an ordered list</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_ol_type.asp">type</a></td>
+                            <td>1
+                                <br> A
+                                <br> a
+                                <br> I
+                                <br> i
+                            </td>
+                            <td>Specifies the kind of marker to use in the list</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>75</td>
+            <td>
+                &lt;optgroup&gt;
+            </td>
+            <td>
+                The &lt;optgroup> is used to group related options in a drop-down list. If you have a long list of options, groups of related options are easier to handle for a user.
+            </td>
+            <td>
+                Eg.
+                <select>
+                    <optgroup label="Swedish Cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                    </optgroup>
+                    <optgroup label="German Cars" disabled>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </optgroup>
+                </select>
+                <br>
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_optgroup_disabled.asp">disabled</a></td>
+                            <td>disabled</td>
+                            <td>Specifies that an option-group should be disabled</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_optgroup_label.asp">label</a></td>
+                            <td><i>text</i></td>
+                            <td>Specifies a label for an option-group</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>76</td>
+            <td>
+                &lt;option&gt;
+            </td>
+            <td>
+                The &lt;option> tag defines an option in a select list. &lt;option> elements go inside a &lt;select> or &lt;datalist> element.
+                <br>
+                <b>Note</b>: The &lt;option> tag can be used without any attributes, but you usually need the value attribute, which indicates what is sent to the server.
+
+                <b>Tip</b>: If you have a long list of options, you can group related options with the &lt;optgroup> tag.
+            </td>
+            <td>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:20%">Attribute</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="att_option_disabled.asp">disabled</a></td>
+                            <td>disabled</td>
+                            <td>Specifies that an option should be disabled</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_option_label.asp">label</a></td>
+                            <td><i>text</i></td>
+                            <td>Specifies a shorter label for an option</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_option_selected.asp">selected</a></td>
+                            <td>selected</td>
+                            <td>Specifies that an option should be pre-selected when the page loads</td>
+                        </tr>
+                        <tr>
+                            <td><a href="att_option_value.asp">value</a></td>
+                            <td><i>text</i></td>
+                            <td>Specifies the value to be sent to a server</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>77</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>78</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>79</td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
 </body>
