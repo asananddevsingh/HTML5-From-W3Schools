@@ -1,30 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>New Semantic Elements in HTML5</title>
+    <!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            font-size: 0.8em;
+        }
+
+        header,
+        footer,
+        section,
+        article {
+            border: 1px solid grey;
+            margin: 5px;
+            margin-bottom: 15px;
+            padding: 8px;
+            background-color: white;
+        }
+
+        header,
+        footer {
+            color: white;
+            background-color: #444;
+            margin-bottom: 5px;
+        }
+
+        section {
+            background-color: #ddd;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 5px;
+        }
+    </style>
 </head>
+
 <body>
-<!-- (hdr#header>div#logo>a.logo[href="/"])+(nav#navMenu.navigation>ul>li*4>a#nav$.menu[href="/Page$"]{Menu $})+main#main.main-container>section#section$.main-section>article#art$.main-article*2^aside^^footer#main-footer.main-footer{Copyright @ RS World - 2015}-->
- <header id="header">
-     <div id="logo"><a href="/" class="logo"></a></div>
- </header>
- <nav id="navMenu" class="navigation">
-     <ul>
-         <li><a href="/Page1" id="nav1" class="menu">Menu 1</a></li>
-         <li><a href="/Page2" id="nav2" class="menu">Menu 2</a></li>
-         <li><a href="/Page3" id="nav3" class="menu">Menu 3</a></li>
-         <li><a href="/Page4" id="nav4" class="menu">Menu 4</a></li>
-     </ul>
- </nav>
- <main id="main" class="main-container">
-     <section id="section1" class="main-section">
-         <article id="art1" class="main-article"></article>
-         <article id="art2" class="main-article"></article>
-     </section>
-     <aside></aside>
- </main>
- <footer id="main-footer" class="main-footer">Copyright @ RS World - 2015</footer>
+    <!-- (hdr#header>div#logo>a.logo[href="/"])+(nav#navMenu.navigation>ul>li*4>a#nav$.menu[href="/Page$"]{Menu $})+main#main.main-container>section#section$.main-section>article#art$.main-article*2^aside^^footer#main-footer.main-footer{Copyright @ RS World - 2015}-->
+    <header>
+        <h1>Monday Times</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>News</li>
+            <li>Sports</li>
+            <li>Weather</li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>News Section</h2>
+
+        <article>
+            <h2>News Article</h2>
+            <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+            <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+            <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+        </article>
+
+        <article>
+            <h2>News Article</h2>
+            <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+            <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+            <p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+        </article>
+
+    </section>
+
+    <footer>
+        <p> &copy; 2014 Monday Times. All rights reserved.</p>
+    </footer>
+
+    <div class="notes">
+        <b>HTML 5 Notes:</b>
+
+        <p>
+            New HTML5 Elements The most interesting new elements are: New semantic elements like &lt;header>, &lt;footer>, &lt;article>, and &lt;section>. New form control attributes like number, date, time, calendar, and range. New graphic elements: &lt;svg> and &lt;canvas>. New multimedia elements: &lt;audio> and &lt;video>.
+        </p>
+        <p>
+            New HTML5 API's (Application Programming Interfaces) The most interesting new API's are: HTML Geolocation HTML Drag and Drop HTML Local Storage HTML Application Cache HTML Web Workers HTML SSE
+        </p>
+        <p>
+            <b>Define HTML5 Elements as Block Elements</b> HTML5 defines eight new semantic HTML elements. All these are block-level elements. To secure correct behavior in older browsers, you can set the CSS display property to block: Eg.
+            <br> header, section, footer, aside, nav, main, article, figure { display: block; }
+        </p>
+        <p>
+            <h3>New Semantic/Structural Elements</h3> HTML5 offers new elements for better document structure:
+            <br>
+            <table class="w3-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:15%">Tag</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;article&gt;</td>
+                        <td>Defines an article in the document</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;aside&gt;</td>
+                        <td>Defines content aside from the page content</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;bdi&gt;</td>
+                        <td>Defines a part of text that might be formatted in a different direction from other text</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;details&gt;</td>
+                        <td>Defines additional details that the user can view or hide</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;dialog&gt;</td>
+                        <td>Defines a dialog box or window</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;figcaption&gt;</td>
+                        <td>Defines a caption for a &lt;figure&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;figure&gt;</td>
+                        <td>Defines self-contained content, like illustrations, diagrams, photos, code listings, etc.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;footer&gt;</td>
+                        <td>Defines a footer for the document or a section</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;header&gt;</td>
+                        <td>Defines a header for the document or a section</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;main&gt;</td>
+                        <td>Defines the main content of a document</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;mark&gt;</td>
+                        <td>Defines marked or highlighted text</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;menuitem&gt;&nbsp;</td>
+                        <td>Defines a command/menu item that the user can invoke from a popup menu</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;meter&gt;</td>
+                        <td>Defines a scalar measurement within a known range (a gauge)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;nav&gt;</td>
+                        <td>Defines navigation links in the document</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;progress&gt;</td>
+                        <td>Defines the progress of a task</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;rp&gt;</td>
+                        <td>Defines what to show in browsers that do not support ruby annotations</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;rt&gt;</td>
+                        <td>Defines an explanation/pronunciation of characters (for East Asian typography)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ruby&gt;</td>
+                        <td>Defines a ruby annotation (for East Asian typography)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;section&gt;</td>
+                        <td>Defines a section in the document</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;summary&gt;</td>
+                        <td>Defines a visible heading for a &lt;details&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;time&gt;</td>
+                        <td>Defines a date/time</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;wbr&gt;</td>
+                        <td>Defines a possible line-break</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3>New Form Elements</h3>
+            <br>
+            <table class="w3-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:15%">Tag</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;datalist&gt;</td>
+                        <td>Defines pre-defined options for input controls</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;keygen&gt;</td>
+                        <td>Defines a key-pair generator field (for forms)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;output&gt;</td>
+                        <td>Defines the result of a calculation</td>
+                    </tr>
+                </tbody>
+            </table <br>
+            <h3>New Input Types</h3>
+            <table class="w3-table-all">
+                <tbody>
+                    <tr>
+                        <th>New Input Types</th>
+                        <th>New Input Attributes</th>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <ul>
+                                <li>color</li>
+                                <li>date</li>
+                                <li>datetime</li>
+                                <li>datetime-local</li>
+                                <li>email</li>
+                                <li>month</li>
+                                <li>number</li>
+                                <li>range</li>
+                                <li>search</li>
+                                <li>tel</li>
+                                <li>time</li>
+                                <li>url</li>
+                                <li>week</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>autocomplete</li>
+                                <li>autofocus</li>
+                                <li>form</li>
+                                <li>formaction</li>
+                                <li>formenctype</li>
+                                <li>formmethod</li>
+                                <li>formnovalidate</li>
+                                <li>formtarget</li>
+                                <li>height and width</li>
+                                <li>list</li>
+                                <li>min and max</li>
+                                <li>multiple</li>
+                                <li>pattern (regexp)</li>
+                                <li>placeholder</li>
+                                <li>required</li>
+                                <li>step</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3>HTML5 - New Attribute Syntax</h3>
+            <table class="w3-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:15%">Type</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Empty</td>
+                        <td>&lt;input type="text" value="John" <strong>disabled</strong>&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>Unquoted</td>
+                        <td>&lt;input type="text" <strong>value=John</strong>&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>Double-quoted</td>
+                        <td>&lt;input type="text" <strong>value="John Doe"</strong>&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>Single-quoted</td>
+                        <td>&lt;input type="text" <strong>value='John Doe'</strong>&gt;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3>HTML5 Graphics</h3>
+            <table class="w3-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:15%">Tag</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;canvas&gt;</td>
+                        <td>Defines graphic drawing using JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;svg&gt;</td>
+                        <td>Defines graphic drawing using SVG</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3>New Media Elements</h3>
+            <br>
+            <table class="w3-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:15%">Tag</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;audio&gt;</td>
+                        <td>Defines sound or music content</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;embed&gt;</td>
+                        <td>Defines containers for external applications (like plug-ins)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;source&gt;</td>
+                        <td>Defines sources for &lt;video&gt; and &lt;audio&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;track&gt;</td>
+                        <td>Defines tracks for &lt;video&gt; and &lt;audio&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;video&gt;</td>
+                        <td>Defines video or movie content</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>
+            <h3>Why Semantic HTML5 Elements?</h3> With HTML4, developers used their own favorite attribute names to style page elements: header, top, bottom, footer, menu, navigation, main, container, content, article, sidebar, topnav, ... This made it impossible for search engines to identify the correct web page content. With HTML5 elements like: &lt;header> &lt;footer> &lt;nav> &lt;section> &lt;article>, this will become easier. According to the W3C, a Semantic Web: "Allows data to be shared and reused across applications, enterprises, and communities."
+        </p>
+
+        <p>
+            <h3>HTML(5) Style Guide and Coding Conventions</h3>
+            <b>HTML Coding Conventions</b> Web developers are often uncertain about the coding style and syntax to use in HTML. Between 2000 and 2010, many web developers converted from HTML to XHTML. With XHTML, developers were forced to write valid and "well-formed" code. HTML5 is a bit more sloppy when it comes to code validation. With HTML5, you must create your own Best Practice, Style Guide and Coding Conventions.
+
+            <br>
+            <b>Be Smart and Future Proof</b> A consequent use of style, makes it easier for others to understand and use your HTML. In the future, programs like XML readers, may want to read your HTML. Using a well-formed "close to XHTML" syntax, can be smart. Note Always keep your style smart, tidy, clean, and well-formed.
+        </p>
+        <p>
+            <b>Use Lower Case Element Names</b> HTML5 allows mixing uppercase and lowercase letters in element names. We recommend using lowercase element names: Mixing uppercase and lowercase names is bad Developers are used to using lowercase names (as in XHTML) Lowercase look cleaner Lowercase are easier to write
+        </p>
+        <p>
+            <b>Close All HTML Elements</b> In HTML5, you don't have to close all elements (for example the
+            <p> element). We recommend closing all HTML elements:
+            </p>
+            <p>
+                <b>Close Empty HTML Elements</b> In HTML5, it is optional to close empty elements. This is allowed:
+                <br> &lt;meta charset="utf-8">
+                <br> This is also allowed:
+                <br> &lt;meta charset="utf-8" />
+
+            </p>
+            <p>
+                <b>Use Lower Case Attribute Names</b> HTML5 allows mixing uppercase and lowercase letters in attribute names. We recommend using lowercase attribute names: Mixing uppercase and lowercase names is bad Developers are used to using lowercase names (as in XHTML) Lowercase look cleaner Lowercase are easier to write
+            </p>
+            <p>
+                <b>Quote Attribute Values</b> HTML5 allows attribute values without quotes. We recommend quoting attribute values: You have to use quotes if the value contains spaces Mixing styles is never good Quoted values are easier to read
+            </p>
+            <p>
+                Spaces and Equal Signs
+            </p>
+            <p>
+                <b>Avoid Long Code Lines</b> When using an HTML editor, it is inconvenient to scroll right and left to read the HTML code. Try to avoid code lines longer than 80 characters.
+            </p>
+            <p>
+                <b>Blank Lines and Indentation</b> Do not add blank lines without a reason. For readability, add blank lines to separate large or logical code blocks. For readability, add 2 spaces of indentation. Do not use TAB. Do not use unnecessary blank lines and indentation. It is not necessary to use blank lines between short and related
+            </p>
+            <p>
+                <b>Differences Between .htm and .html</b> There is no difference between the .htm and .html extensions. Both will be treated as HTML by any web browser or web server. The differences are cultural: .htm "smells" of early DOS systems where the system limited the extensions to 3 characters. .html "smells" of Unix operating systems that did not have this limitation.
+            </p>
+            <hr>
+            <p>
+                <b>What is HTML Canvas?</b> The HTML &lt;canvas> element is used to draw graphics, on the fly, via scripting (usually JavaScript). The &lt;canvas> element is only a container for graphics. You must use a script to actually draw the graphics. Canvas has several methods for drawing paths, boxes, circles, text, and adding images. A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+                <br>
+                <b>&lt;canvas id="myCanvas" width="200" height="100"></canvas></b>
+                <br>Eg.
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+                    Your browser does not support the HTML5 canvas tag.</canvas>
+
+                <script>
+                    var c = document.getElementById("myCanvas");
+                    var ctx = c.getContext("2d");
+                    // Create gradient
+                    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                    grd.addColorStop(0, "red");
+                    grd.addColorStop(1, "white");
+                    // Fill with gradient
+                    ctx.fillStyle = grd;
+                    ctx.fillRect(10, 10, 150, 80);
+                </script>
+
+            </p>
+            <p>
+                <b>What is SVG?</b>
+                <br> SVG stands for Scalable Vector Graphics SVG is used to define graphics for the Web SVG is a W3C recommendation The HTML &lt;svg> Element The HTML &lt;svg> element (introduced in HTML5) is a container for SVG graphics. SVG has several methods for drawing paths, boxes, circles, text, and graphic images. Eg.
+                <br>
+                <svg width="300" height="200">
+                    <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" /> Sorry, your browser does not support inline SVG.
+                </svg>
+            </p>
+            <p>
+                <b>Differences Between SVG and Canvas</b> SVG is a language for describing 2D graphics in XML.
+                <br> Canvas draws 2D graphics, on the fly (with a JavaScript).
+                <br> SVG is XML based, which means that every element is available within the SVG DOM. You can attach JavaScript event handlers for an element.
+                <br> In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape.
+                <br> Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, it is forgotten by the browser. If its position should be changed, the entire scene needs to be redrawn, including any objects that might have been covered by the graphic.
+                <br>
+                <b>Comparison of Canvas and SVG</b>
+                <br> The table below shows some important differences between Canvas and SVG:
+                <br>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:50%">Canvas</th>
+                            <th style="width:50%">SVG</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Resolution dependent</li>
+                                    <li>No support for event handlers</li>
+                                    <li>Poor text rendering capabilities</li>
+                                    <li>You can save the resulting image as .png or .jpg</li>
+                                    <li>Well suited for graphic-intensive games</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Resolution independent</li>
+                                    <li>Support for event handlers</li>
+                                    <li>Best suited for applications with large rendering areas (Google Maps)</li>
+                                    <li>Slow rendering if complex (anything that uses the DOM a lot will be slow)</li>
+                                    <li>Not suited for game applications</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+    </div>
+
+
 
 </body>
+
+
 </html>
