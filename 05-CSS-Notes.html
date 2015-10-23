@@ -337,8 +337,26 @@ p.oblique {
     <b>Set Font Size With Em</b> To allow users to resize the text (in the browser menu), many developers use em instead of pixels. The em size unit is recommended by the W3C. 1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px. The size can be calculated from pixels to em using this formula:
     <h3>pixels/16=em</h3>
 
-
-
+    <hr>
+    <b>CSS Outline</b> An outline is a line that is drawn around elements (outside the borders) to make the element "stand out". However, the outline property is different from the border property. The outline is not a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.
+    <hr>
+    <b>Margin</b> The margin clears an area around an element (outside the border). The margin does not have a background color, and is completely transparent. The top, right, bottom, and left margin can be changed independently using separate properties. A shorthand margin property can also be used, to change all margins at once.
+    <hr>
+    <b>Padding</b> The padding clears an area around the content (inside the border) of an element. The padding is affected by the background color of the element. The top, right, bottom, and left padding can be changed independently using separate properties. A shorthand padding property can also be used, to change all paddings at once.
+    <hr>
+    <b>Hide an Element - display:none or visibility:hidden?</b> Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:
+    <br>
+    <u>Example
+h1.hidden {
+    display: none;
+}</u>
+    <br>
+    <i>visibility:hidden;</i> also hides an element. However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:
+    <br>
+    <u>Example
+h1.hidden {
+    visibility: hidden;
+}</u>
     <br>
 </body>
 
