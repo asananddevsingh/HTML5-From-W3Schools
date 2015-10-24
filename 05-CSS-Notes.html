@@ -12,6 +12,89 @@
             border: 1px solid grey;
             border-collapse: collapse;
         }
+
+        div.static {
+            position: static;
+            border: 3px solid #8AC007;
+        }
+
+        div.relative {
+            position: relative;
+            left: 30px;
+            border: 3px solid #8AC007;
+        }
+
+        div.fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            border: 3px solid #8AC007;
+        }
+
+        div.abs-relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #8AC007;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #8AC007;
+        }
+
+        .img-z-index {
+            position: relative;
+            left: 0px;
+            top: -70px;
+            z-index: -1;
+        }
+
+        .img-float {
+            float: left;
+            margin: 0 0 10px 10px;
+        }
+
+        #clear> .div1 {
+            float: left;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border: 3px solid #8AC007;
+        }
+
+        #clear> .div2 {
+            border: 1px solid red;
+        }
+
+        #clear> .div3 {
+            float: left;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border: 3px solid #8AC007;
+        }
+
+        #clear> .div4 {
+            border: 1px solid red;
+            clear: left;
+        }
+
+        ::-moz-selection {
+            /* Code for Firefox */
+            color: red;
+            background: yellow;
+        }
+
+        ::selection {
+            color: red;
+            background: yellow;
+        }
     </style>
 </head>
 
@@ -357,7 +440,303 @@ h1.hidden {
 h1.hidden {
     visibility: hidden;
 }</u>
-    <br>
-</body>
+    <hr><b>CSS Layout - The position Property</b>
+    <br><b>The position Property</b> The position property specifies the type of positioning method used for an element. There are four different position values:
+    <ul>
+        <li>static</li>
+        <li>relative</li>
+        <li>fixed</li>
+        <li>absolute</li>
+    </ul>
+    <br> Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
 
+    <br>
+    <b>position: static;</b> HTML elements are positioned static by default. Static positioned elements are not affected by the top, bottom, left, and right properties. An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+    <br>
+    <div class="static">
+        This div element has position: static;
+    </div>
+    <br>
+    <b>position: relative;</b> An element with position: relative; is positioned relative to its normal position. Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+    <div class="relative">
+        This div element has position: relative;
+    </div>
+    <br>
+    <b>position: fixed;</b> An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. A fixed element does not leave a gap in the page where it would normally have been located. Notice the fixed element in the lower-right corner of the page.
+    <div class="fixed">
+        This div element has position: fixed;
+    </div>
+    <br>
+    <b>position: absolute;</b> An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+    <b>Note</b>: A "positioned" element is one whose position is anything except static. Here is a simple example:
+    <div class="abs-relative">This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+    </div>
+    <br>
+    <b>Overlapping Elements</b> When elements are positioned, they can overlap other elements. The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). An element can have a positive or negative stack order:
+    <br>
+    <h1>This is a heading</h1>
+    <img class="img-z-index" src="w3css.gif" width="100" height="140">
+    <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+    <hr>
+    <b>CSS Layout - float and clear</b>
+    <br>
+    <b>The float Property</b> In its simplest use, the float property can be used to wrap text around images. The following example specifies that an image should float to the right in a text:
+    <p><img class="img-float" src="w3css.gif" alt="W3Schools.com" width="100" height="140"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+    <br> <b>The clear Property</b>
+    <br> The clear property is used to control the behavior of floating elements. Elements after a floating element will flow around it. To avoid this, use the clear property. The clear property specifies on which sides of an element floating elements are not allowed to float:
+    <br>
+    <div id="clear">
+        <h2>Without clear</h2>
+        <div class="div1">div1</div>
+        <div class="div2">div2 - Notice that the div2 element is after div1, in the HTML code. However, since div1 is floated to the left, this happens: the text in div2 is floated around div1, and div2 surrounds the whole thing.</div>
+
+        <h2>Using clear</h2>
+        <div class="div3">div3</div>
+        <div class="div4">div4 - Using clear moves div4 down below the floated div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+    </div>
+    <br>
+    <b>The clearfix Hack - overflow: auto;</b> If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. Then we can add overflow: auto;
+    <br>
+    <hr>
+    <b>CSS Layout - inline-block</b>
+    <br><b>The inline-block Value</b> It has been possible for a long time to create a grid of boxes that fills the browser width and wraps nicely (when the browser is resized), by using the float property. However, the inline-block value of the display property makes this even easier. inline-block elements are like inline elements but they can have a width and a height.
+    <br>
+    <br><b>Examples</b> The old way - using float (notice that we also need to specify a clear property for the element after the floating boxes):
+    <br>
+    <u>Example
+.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #8AC007;
+}
+
+.after-box {
+    clear: left;
+}</u>
+    <br> The same effect can be achieved by using the inline-block value of the display property (notice that no clear property is needed):
+    <br>
+    <u>Example: .floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #8AC007;
+}
+
+.after-box {
+    border: 3px solid red;
+}</u>
+    <hr>
+    <b>CSS Layout - Horizontal Align</b>
+    <br><b>Center Align - Using margin</b> Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Use margin: auto;, to horizontally center an element within its container. The element will then take up the specified width, and the remaining space will be split equally between the two margins:
+    <br><b>Tip</b>: Center aligning has no effect if the width property is not set (or set to 100%).
+    <br>
+    <b>Left and Right Align - Using position</b> One method of aligning elements is to use position: absolute;:
+    <br><b>Note</b>: Absolute positioned elements are removed from the normal flow, and can overlap elements.
+
+    <br><b>Tip</b>: When aligning elements with position, always define margin and padding for the
+
+    <body> element. This is to avoid visual differences in different browsers. There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:
+        <br>
+        <b> Left and Right Align - Using float</b> Another method of aligning elements is to use the float property:
+        <br>
+        <b>Tip</b>: When aligning elements with float, always define margin and padding for the
+
+        <body> element. This is to avoid visual differences in different browsers.
+            <br>
+            <hr>
+            <b>CSS Combinators</b> A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+            <br>There are four different combinators in CSS3:
+            <ul>
+                <li>descendant selector</li>
+                <li>child selector</li>
+                <li>adjacent sibling selector</li>
+                <li>general sibling selector</li>
+            </ul>
+            <br> <b>Descendant Selector</b> The descendant selector matches all elements that are descendants of a specified element. The following example selects all lt;> elements inside lt;div> elements:
+
+            <br><u>Example
+div p {
+    background-color: yellow;
+}</u>
+            <br>
+            <b>   Child Selector</b> The child selector selects all elements that are the immediate children of a specified element. The following example selects all &lt;p> elements that are immediate children of a &lt;div> element:
+            <br>
+            <u>Example
+div > p {
+    background-color: yellow;
+}</u>
+            <br>
+            <b>  Adjacent Sibling Selector</b> The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element. Sibling elements must have the same parent element, and "adjacent" means "immediately following". The following example selects all &lt;p> elements that are placed immediately after &lt;div> elements:
+
+            <br><u>Example
+div + p {
+    background-color: yellow;
+}</u>
+            <br>
+            <b>General Sibling Selector</b> The general sibling selector selects all elements that are siblings of a specified element. The following example selects all &lt;p> elements that are siblings of &lt;div> elements:
+
+            <br><u>Example
+div ~ p {
+    background-color: yellow;
+}
+</u>
+            <hr>
+            <b>CSS Pseudo-classes</b>
+            <br>
+            <b>What are Pseudo-classes?</b> A pseudo-class is used to define a special state of an element. For example, it can be used to:
+            <ul>
+                <li>Style an element when a user mouses over it</li>
+                <li>Style visited and unvisited links differently</li>
+            </ul>
+            <br>
+            <b>Syntax</b> The syntax of pseudo-classes:
+
+            <u>selector:pseudo-class {
+    property:value;
+}</u>
+            <br>
+            <i><b>Anchor Pseudo-classes</b></i> Links can be displayed in different ways:
+            <br>
+            <u>Example
+/* unvisited link */
+a:link {
+    color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+    color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}</u>
+            <br><b>Pseudo-classes and CSS Classes</b> Pseudo-classes can be combined with CSS classes:
+
+            <br><u>Example
+a.highlight:hover {
+    color: #ff0000;
+}</u>
+            <br>
+            <b>CSS - The :first-child Pseudo-class</b> The :first-child pseudo-class matches a specified element that is the first child of another element. Match the first &lt;p> element In the following example, the selector matches any &lt;p> element that is the first child of any element:
+
+            <br><u>Example
+p:first-child {
+    color: blue;
+}</u>
+            <br>
+            <b>Match the first &lt;i> element in all &lt;p> elements</b> In the following example, the selector matches the first &lt;i> element in all &lt;p> elements:
+
+            <br><u>Example
+p i:first-child {
+    color: blue;
+}</u>
+            <hr>
+            <b>CSS3 ::selection Selector</b>
+            <br> Definition and Usage The ::selection selector matches the portion of an element that is selected by a user. Only a few CSS properties can be applied to the ::selection selector: color, background, cursor, and outline.
+
+            <br>
+            <h1>Select some text on this page:</h1>
+
+            <p>This is a paragraph.</p>
+            <div>This is some text in a div element.</div>
+            <br>
+            <hr>
+            <b>Image Sprites</b>
+            <br> An image sprite is a collection of images put into a single image. A web page with many images can take a long time to load and generates multiple server requests. Using image sprites will reduce the number of server requests and save bandwidth.
+            <br>
+            <h2>Image Sprites - Simple Example</h2>
+            <p>Instead of using three separate images, we use this single image ("img_navsprites.gif"):</p>
+            <p><img src="img_navsprites.gif" alt="navigation images"></p>
+            <p>With CSS, we can show just the part of the image we need.</p>
+            <hr>
+            <h2>CSS Attribute Selectors</h2>
+            <br><b> CSS [attribute] Selector</b> The
+            <mark>[attribute]</mark> selector is used to select elements with a specified attribute. The following example selects all <a> elements with a target attribute:
+
+<br><u>Example
+a[target] {
+    background-color: yellow;
+}</u> <br>
+       <b>CSS [attribute="value"] Selector</b> <br>
+The [attribute="value"] selector is used to select elements with a specified attribute and value.
+
+The following example selects all &lt;a> elements with a target="_blank" attribute:
+
+<br><u>Example
+a[target="_blank"] {
+    background-color: yellow;
+}</u> <br>
+       <b>CSS [attribute~="value"] Selector</b> <br>
+The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.
+
+The following example selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower":
+
+<br><u>Example
+[title~="flower"] {
+    border: 5px solid yellow;
+}</u>
+       <p>The example above will match elements with title="flower", title="summer flower", and title="flower new", but not title="my-flower" or title="flowers".</p>
+       <br>
+       <b>CSS [attribute|="value"] Selector</b> <br>
+The [attribute|="value"] selector is used to select elements with the specified attribute starting with the specified value.
+
+The following example selects all elements with a class attribute value that begins with "top":
+
+<b>Note</b>: The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text"!
+
+<br><u>Example
+[class|="top"] {
+    background: yellow;
+}</u> <br>
+       <b>CSS [attribute^="value"] Selector</b> <br>
+The [attribute^="value"] selector is used to select elements whose attribute value begins with a specified value.
+
+The following example selects all elements with a class attribute value that begins with "top":
+
+<b>Note</b>: The value does not have to be a whole word!
+
+<br><u>Example
+[class^="top"] {
+    background: yellow;
+}</u>
+      <br>
+       <b>CSS [attribute$="value"] Selector</b> <br>
+The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value.
+
+The following example selects all elements with a class attribute value that ends with "test":
+
+<b>Note</b>: The value does not have to be a whole word!
+<br>
+<u>Example
+[class$="test"] {
+    background: yellow;
+}
+</u> <br>
+<b>CSS [attribute*="value"] Selector</b><br>
+The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value.
+
+The following example selects all elements with a class attribute value that contains "te":
+
+<b>Note</b>: The value does not have to be a whole word!
+
+<br><u>Example
+[class*="te"] {
+    background: yellow;
+}</u>
+
+
+    </body>
 </html>
