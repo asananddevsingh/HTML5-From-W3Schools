@@ -6,6 +6,14 @@
     <title>CSS 3 - Notes</title>
     <base href="http://www.w3schools.com/css/" target="_blank" />
     <style>
+        table,
+        th,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
         #border_image_top {
             border: 10px solid transparent;
             padding: 15px;
@@ -81,6 +89,34 @@
             width: 105px;
             height: 67px;
             font-size: 30px;
+        }
+
+        .box-div1 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+
+        .box-div2 {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid red;
+        }
+
+        .box-size-div1 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+
+        .box-size-div2 {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid red;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -344,6 +380,131 @@ Example
                 <li>An outline do not take up space</li>
                 <li>An outline may be non-rectangular</li>
             </ul>
+            <hr>
+            <b>CSS3 Box Sizing</b> The CSS3 box-sizing property allows us to include the padding and border in an element's total width and height.
+
+            <br> Without the CSS3 box-sizing Property By default, the width and height of an element is calculated like this:
+
+            <br>width + padding + border = actual width of an element
+            <br>height + padding + border = actual height of an element
+
+            <br><b>This means</b>: When you set the width/height of an element, the element often appear bigger than you have set (because the element's border and padding are added to the element's specified width/height). The following illustration shows two &lt;div> elements with the same specified width and height:
+            <br>
+            <div class="box-div1">This div is smaller (width is 300px and height is 100px).</div>
+            <br>
+            <div class="box-div2">This div is bigger (width is also 300px and height is 100px).</div>
+            <br>
+            <b>With the CSS3 box-sizing Property</b>
+            <br> The CSS3 box-sizing property allows us to include the padding and border in an element's total width and height. If you set box-sizing: border-box; on an element padding and border are included in the width and height:
+            <div class="box-size-div1">Both divs are the same size now! (box-sizing: border-box;)</div>
+            <br>
+            <div class="box-size-div2">Hooray! (box-sizing: border-box;)</div>
+            <hr>
+            <b>CSS3 Flexbox</b>
+            <br> Flexible boxes, or flexbox, is a new layout mode in CSS3. Use of flexbox ensures that elements behave predictably when the page layout must accommodate different screen sizes and different display devices. For many applications, the flexible box model provides an improvement over the block model in that it does not use floats, nor do the flex container's margins collapse with the margins of its contents.
+            <br><b>CSS3 Flexbox Concepts</b> Flexbox consists of flex containers and flex items. A flex container is declared by setting the display property of an element to either flex (rendered as a block) or inline-flex (rendered as inline). Inside a flex container there is one or more flex items.
+
+            <b>Note</b>: Everything outside a flex container and inside a flex item is rendered as usual. Flexbox defines how flex items are laid out inside a flex container. Flex items are positioned inside a flex container along a flex line. By default there is only one flex line per flex container.
+            <table class="w3-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:25%">Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/pr_class_display.asp">display</a></td>
+                        <td>Specifies the type of box used for an HTML element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/css3_pr_flex-direction.asp">flex-direction</a></td>
+                        <td>Specifies the direction of the flexible items inside a flex container</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/css3_pr_justify-content.asp">justify-content</a></td>
+                        <td>Horizontally aligns the flex items when the items do not use all available space on the main-axis</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/css3_pr_align-items.asp">align-items</a></td>
+                        <td>Vertically aligns the flex items when the items do not use all available space on the cross-axis</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/css3_pr_flex-wrap.asp">flex-wrap</a></td>
+                        <td>Specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/css3_pr_align-content.asp">align-content</a></td>
+                        <td>Modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/css3_pr_flex-flow.asp">flex-flow</a></td>
+                        <td>A shorthand propert for flex-direction and flex-wrap</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/css3_pr_order.asp">order</a></td>
+                        <td>Specifies the order of a flexible item relative to the rest of the flex items inside the same container</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/css3_pr_align-self.asp">align-self</a></td>
+                        <td>Used on flex items. Overrides the container's align-items property</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/cssref/css3_pr_flex.asp">flex</a></td>
+                        <td>Specifies the length of a flex item, relative to the rest of the flex items inside the same container</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <b>CSS3 Media Queries</b>
+            <br> CSS3 Introduces Media Queries: Media queries in CSS3 extend the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device. Media queries can be used to check many things, such as:
+            <ul>
+                <li>width and height of the viewport</li>
+                <li>width and height of the device</li>
+                <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+                <li>resolution</li>
+            </ul>
+            <br>
+            <b>Media Query Syntax</b>
+            <br> A media query consists of a media type and can contain one or more expressions, which resolve to either true or false.
+
+            <u>@media not|only mediatype and (expressions) {
+        CSS-Code;
+    }</u>
+            <br>
+            <b>CSS3 Media Types</b>
+            <table class="w3-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:25%">Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>all</td>
+                        <td>Used for all media type devices</td>
+                    </tr>
+                    <tr>
+                        <td>print</td>
+                        <td>Used for printers</td>
+                    </tr>
+                    <tr>
+                        <td>screen</td>
+                        <td>Used for computer screens, tablets, smart-phones etc.</td>
+                    </tr>
+                    <tr>
+                        <td>speech</td>
+                        <td>Used for screenreaders that "reads" the page out loud</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <b>Media Queries Simple Examples</b>
+            <br> One way to use media queries is to have an alternate CSS section right inside your style sheet. The following example changes the background-color to lightgreen if the viewport is 480 pixels wide or wider (if the viewport is less than 480 pixels, the background-color will be pink):
+            <br>
+            <u>Example
+    @media screen and (min-width: 480px) {
+        body {
+            background-color: lightgreen;
+        }
+    }</u>
 </body>
 
 </html>
