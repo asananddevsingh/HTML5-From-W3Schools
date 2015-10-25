@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3 - Notes</title>
+    <base href="http://www.w3schools.com/css/" target="_blank" />
+    <style>
+        #border_image_top {
+            border: 10px solid transparent;
+            padding: 15px;
+            -webkit-border-image: url(border.png) 30 round;
+            -o-border-image: url(border.png) 30 round;
+            border-image: url(border.png) 30 round;
+        }
+
+        #example1 {
+            padding: 15px;
+            background: url(img_flwr.gif), url(paper.gif);
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+        }
+
+        #textintro {
+            text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue;
+            color: white;
+            font-size: 30px;
+        }
+
+        #boxshadow3 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            margin-bottom: 30px;
+            background-color: yellow;
+            box-shadow: 10px 10px 5px grey;
+        }
+
+        p.test1 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+
+        p.test2 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .animated_div {
+            width: 65px;
+            height: 40px;
+            background: #92B901;
+            color: #ffffff;
+            position: absolute;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 10px;
+            float: left;
+            margin: 5px;
+            -webkit-transition: -webkit-transform 1s, opacity 1s, background 1s, width 1s, height 1s, font-size 1s;
+            -webkit-border-radius: 5px;
+            -o-transition-property: width, height, -o-transform, background, font-size, opacity;
+            -o-transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+            -moz-transition-property: width, height, -o-transform, background, font-size, opacity;
+            -moz-transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+            transition-property: width, height, transform, background, font-size, opacity;
+            transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+            border-radius: 5px;
+            opacity: 0.4;
+        }
+
+        .animated_div:hover {
+            opacity: 1;
+            background: #1ec7e6;
+            width: 105px;
+            height: 67px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <b>CSS3 Introduction</b>
+    <div class="tutintro">
+        <img src="/images/w3css3_nomirror.gif" alt="CSS3" style="height:101px;width:100px;float:left;">
+        <p>CSS3 is the latest standard for CSS.</p>
+        <p>CSS3 is completely backwards-compatible with earlier versions of CSS.</p>
+        <p>This section teaches you about the new features in CSS3!</p>
+    </div>
+    <hr> <b>CSS3 Modules</b>
+    <br> CSS3 has been split into "modules". It contains the "old CSS specification" (which has been split into smaller pieces). In addition, new modules are added. Some of the most important CSS3 modules are:
+    <ul>
+        <li>Selectors</li>
+        <li>Box Model</li>
+        <li>Backgrounds and Borders</li>
+        <li>Image Values and Replaced Content</li>
+        <li>Text Effects</li>
+        <li>2D/3D Transformations</li>
+        <li>Animations</li>
+        <li>Multiple Column Layout</li>
+        <li>User Interface</li>
+    </ul>
+    <hr>
+    <b>CSS3 Rounded Corners</b>
+    <br>
+    <b>Tip</b>: The border-radius property is actually a shorthand property for the border-top-left-radius, border-top-right-radius, border-bottom-right-radius and border-bottom-left-radius properties.
+    <br>
+    <div style="border:3px solid #8AC007;margin-top:20px;font-size:15px;padding:25px;border-radius:25px;">
+        <h2>CSS3 Rounded Corners</h2>
+        <p>With the CSS3 <code>border-radius</code> property, you can give any element "rounded corners".</p>
+    </div>
+    <hr>
+    <b>CSS3 border-image Property</b>
+    <br> The CSS3 border-image property allows you to specify an image to be used instead of the normal border around an element. The property has three parts:
+    <ol>
+        <li>The image to use as the border</li>
+        <li>Where to slice the image</li>
+        <li>Define whether the middle sections should be repeated or stretched</li>
+    </ol>
+    <div id="border_image_top">
+        <h2>CSS3 Border Images</h2>
+        <p>With the CSS3 <code>border-image</code> property, you can set an image to be used as the border around an element.</p>
+    </div>
+    <hr>
+    <b>CSS3 Backgrounds</b>
+    <br>
+    <div id="example1">
+        <h2>CSS3 Backgrounds</h2>
+        <p>CSS3 contains a few new background properties, which allow greater control of the background element.</p>
+        <p>In this chapter you will learn how to add multiple background images to one element.
+        </p>
+        <p>You will also learn about the following new CSS3 properties:</p>
+        <ul>
+            <li><code>background-size</code></li>
+            <li><code>background-origin</code></li>
+            <li><code>background-clip</code></li>
+        </ul>
+        <br>
+    </div>
+    <b>CSS3 Multiple Backgrounds</b>
+    <br> CSS3 allows you to add multiple background images for an element, through the background-image property. The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer. The following example has two background images, the first image is a flower (aligned to the bottom and right) and the second image is a paper background (aligned to the top-left corner):
+    <br>
+    <u>
+Example
+#example1 {
+    background-image: url(img_flwr.gif), url(paper.gif);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+}</u>
+    <br>
+    <b>CSS3 Background Size</b>
+    <br> The CSS3 background-size property allows you to specify the size of background images. Before CSS3, the size of a background image was the actual size of the image. CSS3 allows us to re-use background images in different contexts. The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.
+    <br>
+    <b>CSS3 background-origin Property    </b>
+    <br> The CSS3 background-origin property specifies where the background image is positioned. The property takes three different values:
+    <ul>
+        <li>border-box - the background image starts from the upper left corner of the border</li>
+        <li>padding-box - (default) the background image starts from the upper left corner of the padding edge</li>
+        <li>content-box - the background image starts from the upper left corner of the content</li>
+    </ul>
+    <br>
+    <b>CSS3 background-clip Property</b>
+    <br> The CSS3 background-clip property specifies the painting area of the background. The property takes three different values:
+    <ul>
+        <li>border-box - (default) the background is painted to the outside edge of the border</li>
+        <li>padding-box - the background is painted to the outside edge of the padding</li>
+        <li>content-box - the background is painted within the content box</li>
+    </ul>
+    <b>CSS3 Colors</b> RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity for a color. An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+    <div style="background: rgba(255, 0, 0, 0.2);">rgba(255, 0, 0, 0.2);</div>
+    <div style="background: rgba(255, 0, 0, 0.4);">rgba(255, 0, 0, 0.4);</div>
+    <div style="background: rgba(255, 0, 0, 0.6);">rgba(255, 0, 0, 0.6);</div>
+    <div style="background: rgba(255, 0, 0, 0.8);">rgba(255, 0, 0, 0.8);</div>
+    <hr>
+    <b>CSS3 Gradients</b>
+
+    <br> CSS3 gradients let you display smooth transitions between two or more specified colors. Earlier, you had to use images for these effects. However, by using CSS3 gradients you can reduce download time and bandwidth usage. In addition, elements with gradients look better when zoomed, because the gradient is generated by the browser. CSS3 defines two types of gradients:
+    <img src="gradient_top.png" alt="Linear gradient" class="img-responsive" style="width:100%;height:auto;margin-bottom:12px;">
+    <ul>
+        <li><strong>Linear Gradients (goes down/up/left/right/diagonally)</strong></li>
+        <li><strong>Radial Gradients (defined by their center)</strong></li>
+    </ul>
+    <b>CSS3 Radial Gradients</b> A radial gradient is defined by its center. To create a radial gradient you must also define at least two color stops. Example of Radial Gradient:
+    <img src="gradient_radial.jpg" alt="Radial gradient" style="width:200px;height:150px">
+    <hr>
+    <b>CSS3 Shadow Effects</b>
+    <br>
+    <p id="textintro" xclass="intro">With CSS3 you can create shadow effects!</p>
+    <ul>
+        <li><code>text-shadow</code></li>
+        <li><code>box-shadow</code></li>
+    </ul>
+    Text shadow effect with blur!
+    <u>Example
+    h1 {
+        text-shadow: 2px 2px 5px red;
+    }</u>
+    <br>
+    <b>CSS3 box-shadow Property</b>
+    <br> The CSS3 box-shadow property applies shadow to elements. In its simplest use, you only specify the horizontal shadow and the vertical shadow:
+    <br>
+    <div id="boxshadow3">This is a yellow &lt;div&gt; element with a blurred, grey box-shadow</div>
+    <hr>
+    <b>CSS3 Text</b> CSS3 contains several new text features. In this chapter you will learn about the following text properties:
+    <ul>
+        <li><code>text-overflow</code></li>
+        <li><code>word-wrap</code></li>
+        <li><code>word-break</code></li>
+    </ul>
+    <br>
+    <p>text-overflow: clip:</p>
+    <p class="test1">This is some long text that will not fit in the box</p>
+
+    <p>text-overflow: ellipsis:</p>
+    <p class="test2">This is some long text that will not fit in the box</p>
+    <hr>
+
+    <b>CSS3 Web Fonts</b> - The @font-face Rule Web fonts allow Web designers to use fonts that are not installed on the user's computer. When you have found/bought the font you wish to use, just include the font file on your web server, and it will be automatically downloaded to the user when needed. Your "own" fonts are defined within the CSS3 @font-face rule.
+    <h2>Different Font Formats</h2>
+    <p><strong>TrueType Fonts (TTF)</strong></p>
+    <p>TrueType is a font standard developed in the late 1980s, by Apple and Microsoft. TrueType is the most common font format for both the Mac OS and Microsoft Windows operating systems.</p>
+    <p><strong>OpenType Fonts (OTF)</strong></p>
+    <p>OpenType is a format for scalable computer fonts. It was built on TrueType, and is a registered trademark of Microsoft. OpenType fonts are used commonly today on the major computer platforms.</p>
+    <p><strong>The Web Open Font Format (WOFF)</strong></p>
+    <p>WOFF is a font format for use in web pages. It was developed in 2009, and is now a W3C Recommendation. WOFF is essentially OpenType or TrueType with compression and additional metadata. The goal is to support font distribution from a server to a client over a network with bandwidth constraints.</p>
+    <p><strong>The Web Open Font Format (WOFF 2.0)</strong></p>
+    <p>TrueType/OpenType font that provides better compression than WOFF 1.0.</p>
+    <p><strong>SVG Fonts/Shapes</strong></p>
+    <p>SVG fonts allow SVG to be used as glyphs when displaying text. The SVG 1.1 specification define a font module that allows the creation of fonts within an SVG document. You can also apply CSS to SVG documents, and the @font-face rule can be applied to text in SVG documents.</p>
+    <p><strong>Embedded OpenType Fonts (EOT)</strong></p>
+    <p>EOT fonts are a compact form of OpenType fonts designed by Microsoft for use as embedded fonts on web pages.</p>
+    <b>Using The Font You Want</b> In the CSS3 @font-face rule you must first define a name for the font (e.g. myFirstFont), and then point to the font file.
+
+    <b>Tip</b>: Always use lowercase letters for the font URL. Uppercase letters can give unexpected results in IE. To use the font for an HTML element, refer to the name of the font (myFirstFont) through the font-family property:
+
+    <u>Example
+    @font-face {
+        font-family: myFirstFont;
+        src: url(sansation_light.woff);
+    }
+
+    div {
+        font-family: myFirstFont;
+    }</u>
+    <hr>
+    <b>CSS3 Transforms</b>
+    <br>CSS3 transforms allow you to translate, rotate, scale, and skew elements. A transformation is an effect that lets an element change shape, size and position. CSS3 supports 2D and 3D transformations. Mouse over the elements below to see the difference between a 2D and a 3D transformation:
+    <br> Following 2D transformation methods:
+    <ul>
+        <li><code>translate()</code></li>
+        <li><code>rotate()</code></li>
+        <li><code>scale()</code></li>
+        <li><code>skewX()</code></li>
+        <li><code>skewY()</code></li>
+        <li><code>matrix()</code></li>
+    </ul>
+    <hr>
+    <b>CSS3 3D Transforms</b>
+    <br> CSS3 allows you to format your elements using 3D transformations.
+
+    <ul>
+        <li><code>rotateX()</code></li>
+        <li><code>rotateY()</code></li>
+        <li><code>rotateZ()</code></li>
+    </ul>
+    <hr>
+    <h2>CSS3 Transitions</h2>
+    <p>CSS3 transitions allows you to change property values smoothly (from one value to another), over a given duration.</p>
+    <p><strong>Example:</strong> Mouse over the element below to see a CSS3 transition effect</p>
+    <div style="height:70px;">
+        <div class="animated_div">CSS3
+            <br><span style="font-size:50%;">Transition</span></div>
+    </div>
+    <br> Specify the Speed Curve of the Transition The transition-timing-function property specifies the speed curve of the transition effect. The transition-timing-function property can have the following values:
+    <ul>
+        <li>ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+        <li>linear - specifies a transition effect with the same speed from start to end</li>
+        <li>ease-in - specifies a transition effect with a slow start</li>
+        <li>ease-out - specifies a transition effect with a slow end</li>
+        <li>ease-in-out - specifies a transition effect with a slow start and end</li>
+        <li>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function</li>
+    </ul>
+    <u>Example
+    #div1 {transition-timing-function: linear;}</u>
+    <hr>
+    <b>What are CSS3 Animations?</b> An animation lets an element gradually change from one style to another. You can change as many CSS properties you want, as many times you want. To use CSS3 animation, you must first specify some keyframes for the animation. Keyframes hold what styles the element will have at certain times.
+    <br> <b>The @keyframes Rule</b> When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times. To get an animation to work, you must bind the animation to an element. The following example binds the "example" animation to the
+    <div> element. The animation will lasts for 4 seconds, and it will gradually change the background-color of the
+        <div> element from "red" to "yellow":
+
+            <u>
+   Example
+    <br>/* The animation code */
+    @keyframes example {
+        from {background-color: red;}
+        to {background-color: yellow;}
+    }
+    <br>
+    /* The element to apply the animation to */
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+    }
+    </u>
+            <br>
+            <b>Delay an Animation & Set How Many Times an Animation Should Run </b>
+            <br>The animation-delay property specifies a delay for the start of an animation.
+            <br> The animation-iteration-count property specifies the number of times an animation should run.
+            <hr>
+            <b>CSS3 Multi-column Layout</b>
+            <br> The CSS3 multi-column layout allows easy definition of multiple columns of text - just like in newspapers:
+            <br><b>CSS3 Multi-column Properties</b>
+            <ul>
+                <li><code>column-count</code></li>
+                <li><code>column-gap</code></li>
+                <li><code>column-rule-style</code></li>
+                <li><code>column-rule-width</code></li>
+                <li><code>column-rule-color</code></li>
+                <li><code>column-rule</code></li>
+                <li><code>column-span</code></li>
+                <li><code>column-width</code></li>
+            </ul>
+            <hr>
+            <b>CSS3 User Interface</b>
+            <br> CSS3 has new user interface features such as resizing elements, outlines, and box sizing. In this chapter you will learn about the following user interface properties:
+            <ul>
+                <li><code>resize</code></li>
+                <li><code>outline-offset</code></li>
+            </ul>
+            <br> <b>CSS3 Resizing</b> The resize property specifies whether or not an element should be resizable by the user.
+            <br>
+            <b>CSS3 Outline Offset</b> The outline-offset property adds space between an outline and the edge or border of an element.
+            <ul>
+                <li>An outline is a line drawn around elements, outside the border edge</li>
+                <li>An outline do not take up space</li>
+                <li>An outline may be non-rectangular</li>
+            </ul>
+</body>
+
+</html>
